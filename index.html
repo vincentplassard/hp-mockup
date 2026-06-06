@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Userled — The AI layer your ABM is missing.</title>
+
+<!--
+  Userled homepage — v5
+  Copy & modules from the Userled homepage PDF; visuals matched to brand refs.
+  Tokens in :root; swap --font-serif for the brand's exact display serif.
+-->
+
+<meta name="description" content="Userled is the AI-native ABM platform that activates, engages, and converts your key accounts — across every account, every channel, every touchpoint." />
+<meta name="theme-color" content="#1b45ff" />
+<link rel="canonical" href="https://www.userled.io/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231b45ff'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='white' text-anchor='middle'%3Eu%3C/text%3E%3C/svg%3E" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Userled" />
+<meta property="og:title" content="Userled — The AI layer your ABM is missing." />
+<meta property="og:description" content="The only AI-native ABM platform that activates, engages, and converts key accounts. Every account. Every channel. Every touchpoint." />
+<meta property="og:url" content="https://www.userled.io/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Userled — The AI layer your ABM is missing." />
+<meta name="twitter:description" content="The only AI-native ABM platform that activates, engages, and converts key accounts." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --blue:#1b45ff; --blue-700:#1638cc; --indigo:#0b1f7a;
+    --blue-50:#eef1ff; --blue-100:#dde4ff;
+    --orange:#ff4e1b; --orange-text:#c4330f; --yellow:#ffd83a;
+    --ink:#0b0c10; --ink-2:#15161f; --ink-3:#222431;
+    --cream:#f6efe8; --cream-2:#faf5f0; --paper:#f5f6fb;
+    --gray-700:#454a56; --gray-500:#6a7080; --gray-400:#9aa0ad;
+    --line:rgba(11,12,16,.10); --line-2:rgba(255,255,255,.12);
+    --g2:#ff492c; --white:#fff;
+    --font-serif:"Spectral", Georgia, "Times New Roman", serif;
+    --font-sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --container:1180px;
+    --r:16px; --r-lg:24px; --r-xl:32px;
+    --sh-sm:0 2px 10px rgba(11,12,16,.06);
+    --sh:0 14px 40px rgba(11,12,16,.09);
+    --sh-lg:0 30px 70px rgba(11,12,16,.16);
+    --sh-blue:0 24px 60px rgba(27,69,255,.30);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-sans);color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1.55;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+  ::selection{background:var(--blue);color:#fff;}
+  .container{max-width:var(--container);margin:0 auto;padding:0 24px;}
+  h1,h2,h3{font-family:var(--font-serif);font-weight:400;letter-spacing:-.015em;margin:0;}
+  h1{font-size:clamp(46px,7vw,98px);font-weight:300;line-height:1.0;}
+  h2{font-size:clamp(32px,4.2vw,58px);line-height:1.06;}
+  h3{font-size:clamp(20px,2.2vw,27px);}
+  p{margin:0;}
+  .eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-text);}
+  .section{padding:clamp(76px,9vw,128px) 0;}
+  .lead{font-size:clamp(16px,1.45vw,19px);color:var(--gray-500);line-height:1.6;}
+  .center{text-align:center;}
+  .section-head{max-width:680px;}
+  .section-head.center{margin:0 auto;}
+  .section-head .eyebrow{display:block;margin-bottom:18px;}
+  .section-head h2{margin-bottom:18px;}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:600;padding:14px 22px;border-radius:8px;transition:transform .16s ease,background .16s ease,color .16s ease,border-color .16s ease;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn .ico{width:16px;height:16px;}
+  .btn-blue{background:var(--blue);color:#fff;box-shadow:var(--sh-blue);}
+  .btn-blue:hover{background:var(--blue-700);}
+  .btn-white{background:#fff;color:var(--blue);}
+  .btn-white:hover{background:var(--blue-50);}
+  .btn-ghost-l{border:1px solid rgba(255,255,255,.35);color:#fff;}
+  .btn-ghost-l:hover{background:rgba(255,255,255,.10);}
+  .play-tri{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;}
+  .play-tri svg{width:13px;height:13px;fill:currentColor;margin-left:1px;}
+  .link-arrow{display:inline-flex;align-items:center;gap:7px;font-weight:600;color:var(--blue);font-size:15px;}
+  .link-arrow svg{width:15px;height:15px;transition:transform .16s ease;}
+  .link-arrow:hover svg{transform:translate(3px,-3px);}
+
+  .announce{background:var(--orange-text);color:#fff;text-align:center;font-size:13.5px;font-weight:500;padding:9px 16px;}
+  .announce a{display:inline-flex;align-items:center;gap:7px;}
+
+  .nav{position:sticky;top:0;z-index:50;transition:background .25s ease,box-shadow .25s ease,border-color .25s ease;border-bottom:1px solid transparent;}
+  .nav-inner{position:relative;display:flex;align-items:center;justify-content:space-between;padding:20px 0;}
+  .logo{font-weight:700;font-size:22px;letter-spacing:-.03em;color:#fff;transition:color .25s ease;}
+  .nav-links{display:flex;gap:30px;}
+  .nav-links a{font-size:15px;color:rgba(255,255,255,.92);transition:color .25s ease;padding-bottom:2px;}
+  .nav-links a:hover{color:#fff;}
+  .nav-links a.active{border-bottom:2px solid currentColor;}
+  .nav-right{display:flex;align-items:center;gap:26px;}
+  .nav-right a{font-size:15px;color:#fff;transition:color .25s ease;}
+  .nav-toggle{display:none;width:42px;height:42px;border-radius:9px;align-items:center;justify-content:center;color:#fff;transition:color .25s ease;}
+  .nav-toggle svg{width:24px;height:24px;}
+  .nav.scrolled{background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(14px);border-bottom-color:var(--line);box-shadow:0 6px 24px rgba(11,12,16,.05);}
+  .nav.scrolled .logo,.nav.scrolled .nav-links a,.nav.scrolled .nav-right a,.nav.scrolled .nav-toggle{color:var(--ink);}
+  .nav.scrolled .nav-links a{color:var(--gray-700);}
+
+  /* hero */
+  .hero{position:relative;background:var(--blue);color:#fff;overflow:hidden;}
+  .hero-deco{position:absolute;inset:0;pointer-events:none;}
+  .hero-deco svg{position:absolute;opacity:.5;}
+  .hero-inner{position:relative;z-index:2;text-align:center;padding:clamp(48px,7vw,92px) 0 clamp(72px,9vw,116px);}
+  .hero h1{margin-bottom:24px;}
+  .hero-sub{font-size:clamp(16px,1.6vw,21px);color:rgba(255,255,255,.92);max-width:640px;margin:0 auto 38px;}
+  .promptbar{display:flex;align-items:center;gap:14px;background:#fff;border-radius:16px;padding:13px 13px 13px 20px;max-width:640px;margin:0 auto;box-shadow:var(--sh-lg);text-align:left;}
+  .promptbar .spark{width:26px;height:26px;flex:0 0 26px;color:var(--blue);}
+  .promptbar .ptext{flex:1;font-size:clamp(15px,1.5vw,18px);color:var(--ink);min-height:24px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .promptbar .caret{display:inline-block;width:2px;height:1.05em;background:var(--blue);margin-left:2px;vertical-align:-2px;animation:blink 1s steps(1) infinite;}
+  @keyframes blink{50%{opacity:0;}}
+  .promptbar .go{flex:0 0 auto;width:46px;height:46px;border-radius:12px;background:var(--blue);display:flex;align-items:center;justify-content:center;transition:background .16s ease,transform .16s ease;}
+  .promptbar .go:hover{background:var(--blue-700);transform:translateY(-1px);}
+  .promptbar .go svg{width:20px;height:20px;color:#fff;}
+  .hero-cta-row{display:flex;gap:14px;justify-content:center;margin-top:32px;flex-wrap:wrap;}
+
+  .logos{padding:56px 0 8px;}
+  .logos .cap{text-align:center;font-size:14px;color:var(--gray-500);margin-bottom:30px;}
+  .marquee-wrap{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+  .marquee{display:flex;width:max-content;animation:scroll 34s linear infinite;}
+  .marquee:hover{animation-play-state:paused;}
+  .marquee .row{display:flex;align-items:center;gap:62px;padding-right:62px;}
+  @keyframes scroll{to{transform:translateX(-50%);}}
+  .wordmark{font-weight:700;font-size:22px;letter-spacing:-.02em;color:#0c0d12;opacity:.46;white-space:nowrap;transition:opacity .2s ease;}
+  .wordmark:hover{opacity:.85;}
+
+  /* motion */
+  .triplet{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:52px 0 26px;}
+  .tri-card{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:#fff;transition:box-shadow .2s ease,transform .2s ease;}
+  .tri-card:hover{box-shadow:var(--sh);transform:translateY(-2px);}
+  .tri-card .ic{width:44px;height:32px;margin-bottom:16px;}
+  .tri-card h3{font-size:24px;margin-bottom:8px;}
+  .tri-card p{font-size:14.5px;color:var(--gray-500);}
+  .video-yt{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:380px;border:1px solid var(--line);background:repeating-linear-gradient(135deg,#f3f4f6 0 18px,#eceef1 18px 36px);display:flex;align-items:center;justify-content:center;}
+  .video-yt .play{width:78px;height:54px;background:#ff2d2d;border-radius:15px;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 34px rgba(0,0,0,.2);transition:transform .18s ease;}
+  .video-yt .play:hover{transform:scale(1.05);}
+  .video-yt .play svg{width:24px;height:24px;fill:#fff;margin-left:2px;}
+  .tband{background:var(--blue);color:#fff;border-radius:var(--r-lg);overflow:hidden;position:relative;margin-top:28px;}
+  .tband .deco{position:absolute;inset:0;pointer-events:none;opacity:.5;}
+  .tband-grid{display:grid;grid-template-columns:1fr 1fr 1.25fr;min-height:308px;position:relative;z-index:2;}
+  .tstat{padding:34px;display:flex;flex-direction:column;justify-content:space-between;}
+  .tstat .pill{background:rgba(255,255,255,.14);border-radius:12px;padding:18px 20px;align-self:flex-start;}
+  .tstat .pill .big{font-family:var(--font-serif);font-size:46px;line-height:1;}
+  .tstat .pill .cap{font-size:12px;color:rgba(255,255,255,.82);margin-top:6px;}
+  .tstat .logo-c{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:.03em;font-size:18px;margin-top:20px;}
+  .tphoto{position:relative;background:linear-gradient(180deg,rgba(159,180,255,.14),rgba(10,31,128,.4));overflow:hidden;}
+  .tphoto .sil{position:absolute;inset:0;background:radial-gradient(120% 92% at 50% 132%, #e7ecff 0%, #6f86e6 38%, #2447d6 70%, transparent 73%);mix-blend-mode:luminosity;opacity:.92;}
+  .tquote{padding:34px;display:flex;flex-direction:column;justify-content:center;gap:18px;}
+  .tquote p{font-size:16px;line-height:1.55;color:#fff;}
+  .tquote .who b{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.05em;}
+  .tquote .who span{font-size:13px;color:rgba(255,255,255,.8);}
+  .tband-arrows{display:flex;gap:10px;justify-content:center;margin-top:18px;}
+  .tband-arrows button{width:42px;height:42px;border:1px solid var(--line);border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;transition:background .15s ease;}
+  .tband-arrows button:hover{background:#f1f1f3;}
+  .tband-arrows svg{width:16px;height:16px;}
+
+  /* agents */
+  .agents{background:var(--cream);}
+  .agents-head{text-align:center;max-width:660px;margin:0 auto 50px;}
+  .agents-head .eyebrow{display:block;margin-bottom:16px;}
+  .agents-head h2{margin-bottom:16px;}
+  .agents-track{display:flex;gap:22px;overflow-x:auto;padding:8px 2px 18px;scroll-snap-type:x mandatory;scrollbar-width:none;}
+  .agents-track::-webkit-scrollbar{display:none;}
+  .agent-card{flex:0 0 332px;scroll-snap-align:start;border-radius:20px;padding:28px 28px 0;min-height:472px;display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--sh-sm);}
+  .agent-card h3{font-size:27px;margin-bottom:10px;}
+  .agent-card p{font-size:14.5px;margin-bottom:24px;line-height:1.5;}
+  .agent-card.dark{background:var(--ink);color:#fff;} .agent-card.dark p{color:rgba(255,255,255,.7);}
+  .agent-card.blue{background:var(--blue);color:#fff;} .agent-card.blue p{color:rgba(255,255,255,.85);}
+  .agent-card.light{background:#fff;border:1px solid var(--line);} .agent-card.light p{color:var(--gray-500);}
+  .agent-card.warm{background:var(--cream-2);border:1px solid rgba(11,12,16,.06);} .agent-card.warm p{color:var(--gray-500);}
+  .pm{margin-top:auto;border-radius:14px 14px 0 0;background:#fff;border:1px solid rgba(11,12,16,.08);box-shadow:0 -14px 40px rgba(11,12,16,.16);overflow:hidden;}
+  .pm .pmbar{display:flex;align-items:center;gap:6px;padding:11px 13px;border-bottom:1px solid #eef0f3;}
+  .pm .pmbar i{width:9px;height:9px;border-radius:50%;background:#e3e5ea;}
+  .pm .pmbar .t{margin-left:8px;font-size:11px;color:#9aa0ad;}
+  .pm .pmbody{padding:14px;display:flex;flex-direction:column;gap:9px;}
+  .pm .prow{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:#3a3f4c;font-weight:600;background:#f5f6f9;border-radius:9px;padding:9px 11px;}
+  .pm .prow .tog{width:30px;height:17px;border-radius:20px;background:var(--blue);position:relative;flex:0 0 30px;}
+  .pm .prow .tog::after{content:"";position:absolute;width:13px;height:13px;border-radius:50%;background:#fff;top:2px;right:2px;}
+  .pm .tag{font-size:10px;font-weight:700;letter-spacing:.02em;color:#15a34a;background:#eafaf0;padding:5px 10px;border-radius:20px;align-self:flex-start;}
+  .pm .promptline{display:flex;align-items:center;gap:8px;border:1px solid #e6e8ee;border-radius:10px;padding:9px 11px;font-size:11.5px;color:#9aa0ad;}
+  .pm .promptline svg{width:14px;height:14px;color:var(--blue);flex:0 0 14px;}
+  .pm .thumbs{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .pm .th{height:40px;border-radius:8px;}
+  .pm .bars{display:flex;align-items:flex-end;gap:7px;height:66px;}
+  .pm .bars i{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(180deg,#5d78ff,var(--blue));}
+  .pm .ln{height:9px;border-radius:5px;background:#eceef2;} .pm .ln.s{width:48%;} .pm .ln.m{width:72%;}
+  .pm .kpi{display:flex;align-items:center;justify-content:space-between;}
+  .pm .kpi .v{font-family:var(--font-serif);font-size:24px;} .pm .kpi .up{font-size:12px;font-weight:700;color:#16a34a;}
+  .pm .sigrow{display:flex;align-items:center;gap:9px;font-size:11.5px;color:#3a3f4c;font-weight:500;}
+  .pm .sigrow .d{width:8px;height:8px;border-radius:50%;flex:0 0 8px;}
+  .pm .person{display:flex;align-items:center;gap:10px;}
+  .pm .person .av{width:36px;height:36px;border-radius:50%;flex:0 0 36px;background:radial-gradient(circle at 35% 30%,#d8c3a6,#6b513a);}
+  .th.pink{background:linear-gradient(135deg,#ff9ecb,#e8478f);}
+  .th.red{background:linear-gradient(135deg,#ffae9f,#e8543f);}
+  .th.blue{background:linear-gradient(135deg,#9db6ff,#2f5bff);}
+  .th.violet{background:linear-gradient(135deg,#c4b1ff,#7c3aed);}
+  .agents-arrows{display:flex;gap:10px;margin-top:24px;}
+  .agents-arrows button{width:44px;height:44px;border:1px solid var(--line);border-radius:11px;background:#fff;display:flex;align-items:center;justify-content:center;transition:background .15s ease;}
+  .agents-arrows button:hover{background:#f1f1f3;}
+  .agents-arrows svg{width:16px;height:16px;}
+
+  /* ===== shared dual-state visual switcher ===== */
+  .vswitch{position:relative;}
+  .vs-stage{position:relative;min-height:var(--vs-h,470px);}
+  .vs-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .5s ease;display:flex;flex-direction:column;justify-content:center;}
+  .vs-slide.active{opacity:1;visibility:visible;}
+  .vs-tabs{display:flex;gap:8px;justify-content:center;margin-top:20px;flex-wrap:wrap;}
+  .vs-tabs .vt{font-size:12.5px;font-weight:600;color:var(--gray-500);padding:8px 15px;border-radius:30px;border:1px solid var(--line);background:#fff;transition:all .15s;}
+  .vs-tabs .vt.active{background:var(--blue);color:#fff;border-color:var(--blue);}
+
+  /* turn signal into pipeline */
+  .signal{background:var(--paper);}
+  .signal-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center;}
+  .signal-grid .vswitch{order:2;}
+  .sigchips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .sigchips .sc{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--gray-700);background:#fff;border:1px solid var(--line);border-radius:30px;padding:9px 14px;box-shadow:var(--sh-sm);}
+  .sigchips .sc .d{width:8px;height:8px;border-radius:50%;}
+  .queue,.pipe{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--sh-lg);overflow:hidden;width:100%;}
+  .queue .qh,.pipe .qh{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--line);}
+  .queue .qh b,.pipe .qh b{font-size:15px;}
+  .queue .qh .badge,.pipe .qh .badge{font-size:11px;font-weight:600;color:var(--blue);background:var(--blue-50);padding:5px 11px;border-radius:20px;}
+  .qrow{display:flex;align-items:center;gap:14px;padding:15px 20px;border-bottom:1px solid var(--line);}
+  .qrow:last-child{border-bottom:none;}
+  .qrow .av{width:36px;height:36px;border-radius:10px;flex:0 0 36px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:var(--font-serif);}
+  .qrow .nm{flex:1;min-width:0;} .qrow .nm b{font-size:14.5px;display:block;}
+  .qrow .nm span{font-size:12px;color:var(--gray-500);}
+  .qrow .score{display:flex;align-items:center;gap:8px;width:108px;}
+  .qrow .score .bar{flex:1;height:6px;border-radius:4px;background:#eef0f5;overflow:hidden;}
+  .qrow .score .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),#5d78ff);}
+  .qrow .score em{font-size:12px;font-style:normal;font-weight:700;color:var(--ink);}
+  .qrow.hot{background:linear-gradient(90deg,rgba(27,69,255,.06),transparent);}
+  .qrow .act{font-size:12px;font-weight:600;color:#fff;background:var(--blue);padding:8px 12px;border-radius:9px;white-space:nowrap;}
+  .qrow .next{font-size:12px;color:var(--orange-text);font-weight:600;white-space:nowrap;}
+  /* pipeline generated card */
+  .pipe-body{padding:22px 20px;}
+  .pipe-hero{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;}
+  .pipe-hero .big{font-family:var(--font-serif);font-size:46px;line-height:1;}
+  .pipe-hero .sub{font-size:13px;color:var(--gray-500);}
+  .pipe-chart{display:flex;align-items:flex-end;gap:9px;height:120px;margin-bottom:8px;}
+  .pipe-chart .col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;height:100%;}
+  .pipe-chart .col i{display:block;border-radius:5px 5px 0 0;background:linear-gradient(180deg,#5d78ff,var(--blue));}
+  .pipe-chart .col span{font-size:9px;color:var(--gray-400);text-align:center;}
+  .pipe-axis{font-size:11px;color:var(--gray-400);border-top:1px solid var(--line);padding-top:8px;margin-bottom:16px;}
+  .pipe-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .pipe-stats .ps{border:1px solid var(--line);border-radius:12px;padding:12px 13px;}
+  .pipe-stats .ps .v{font-family:var(--font-serif);font-size:23px;line-height:1;}
+  .pipe-stats .ps .k{font-size:11px;color:var(--gray-500);margin-top:5px;}
+
+  /* customer proof */
+  .proof-top{display:flex;align-items:center;gap:20px;margin-bottom:42px;}
+  .proof-top .chip-label{font-size:12.5px;font-weight:600;border:1px solid var(--line);border-radius:9px;padding:9px 14px;white-space:nowrap;}
+  .proof-top .dots{flex:1;border-top:1px dashed rgba(11,12,16,.22);}
+  .proof-top .btn-outline{font-size:14px;font-weight:600;border:1px solid var(--ink);border-radius:11px;padding:13px 20px;white-space:nowrap;transition:background .15s ease,color .15s ease;}
+  .proof-top .btn-outline:hover{background:var(--ink);color:#fff;}
+  .proof-head{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:end;margin-bottom:42px;}
+  .proof-head h2{max-width:13ch;} .proof-head .lead{padding-bottom:6px;}
+  .proof-video{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:16/8;background:radial-gradient(120% 130% at 28% 18%, #2f6d62, #1f4f49 55%, #143b35);}
+  .proof-video .dots-bg{position:absolute;inset:0;opacity:.5;background-image:radial-gradient(rgba(255,255,255,.6) 2.1px, transparent 2.5px);background-size:30px 30px;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 38%,transparent 56%,transparent 70%,#000 88%,transparent);}
+  .proof-video .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:122px;height:122px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;box-shadow:0 20px 50px rgba(255,78,27,.42);transition:transform .18s ease;}
+  .proof-video .play:hover{transform:translate(-50%,-50%) scale(1.05);}
+  .proof-video .play svg{width:40px;height:40px;fill:#fff;margin-left:6px;}
+  .proof-video .vlabel{position:absolute;left:20px;bottom:18px;color:#fff;font-size:13px;font-weight:600;background:rgba(0,0,0,.28);backdrop-filter:blur(4px);padding:8px 14px;border-radius:30px;}
+  .proof-roi{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;margin-top:50px;}
+  .proof-roi .cell{padding:0 30px;border-left:1px solid var(--line);}
+  .proof-roi .cell:first-child{border-left:none;padding-left:0;}
+  .proof-roi .rlabel{font-weight:700;font-size:18px;}
+  .proof-roi .rlink{display:inline-block;margin-top:10px;font-weight:600;color:var(--ink);border-bottom:2px solid var(--orange);padding-bottom:3px;}
+  .proof-roi .stat{font-family:var(--font-serif);font-size:clamp(38px,4vw,52px);line-height:1;font-weight:400;}
+  .proof-roi .desc{font-size:13.5px;color:var(--gray-500);margin-top:10px;}
+  .minproof{margin-top:56px;padding-top:42px;border-top:1px solid var(--line);}
+  .minproof .mp-eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-400);text-align:center;margin-bottom:34px;}
+  .minproof-grid{display:grid;grid-template-columns:repeat(3,1fr);}
+  .minproof .mp{padding:0 32px;border-left:1px solid var(--line);}
+  .minproof .mp:first-child{border-left:none;padding-left:0;} .minproof .mp:last-child{padding-right:0;}
+  .minproof .mp .mk{font-weight:700;font-size:16px;color:var(--ink);opacity:.82;margin-bottom:14px;}
+  .minproof .mp .qt{font-size:14.5px;line-height:1.55;color:var(--gray-700);}
+  .minproof .mp .who{margin-top:18px;display:flex;align-items:center;gap:11px;}
+  .minproof .mp .mp-av{width:44px;height:44px;border-radius:50%;flex:0 0 44px;background:linear-gradient(160deg,#dbe3ff,#3a5bd0);box-shadow:var(--sh-sm);}
+  .minproof .mp .nm{font-size:12.5px;color:var(--gray-500);} .minproof .mp .nm b{color:var(--ink);display:block;font-size:13.5px;}
+
+  /* G2 */
+  .g2{background:var(--cream-2);}
+  .g2-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:52px;}
+  .g2grid{position:relative;width:100%;max-width:420px;margin:0 auto;aspect-ratio:1/.84;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:
+      linear-gradient(rgba(11,12,16,.045) 1px,transparent 1px) 0 0/100% 16.666%,
+      linear-gradient(90deg,rgba(11,12,16,.045) 1px,transparent 1px) 0 0/16.666% 100%,#fff;box-shadow:var(--sh);}
+  .g2grid .axis-v{position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(27,69,255,.16);}
+  .g2grid .axis-h{position:absolute;top:50%;left:0;right:0;height:2px;background:rgba(27,69,255,.16);}
+  .g2grid .wm{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-weight:800;font-size:110px;color:rgba(11,12,16,.045);letter-spacing:-.05em;}
+  .g2grid .ql{position:absolute;font-size:11px;font-weight:700;letter-spacing:.02em;}
+  .g2grid .ql.tl{top:10px;left:12px;color:var(--blue);} .g2grid .ql.tr{top:10px;right:12px;color:var(--orange-text);}
+  .g2grid .ql.bl{bottom:10px;left:12px;color:var(--gray-500);} .g2grid .ql.br{bottom:10px;right:12px;color:#7c3aed;}
+  .g2grid .axlbl-x{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);font-size:9.5px;color:var(--gray-500);background:#fff;padding:1px 6px;}
+  .g2grid .axlbl-y{position:absolute;top:50%;right:1px;transform-origin:right center;transform:translateY(-50%) rotate(-90deg);font-size:9.5px;color:var(--gray-500);background:#fff;padding:1px 6px;}
+  .g2dot{position:absolute;width:15px;height:15px;border-radius:4px;background:#c2c6d0;transform:translate(-50%,-50%);box-shadow:0 2px 6px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:#fff;}
+  .g2dot.me{width:30px;height:30px;border-radius:8px;background:var(--yellow);color:var(--ink);font-size:15px;font-weight:800;z-index:4;box-shadow:0 10px 24px rgba(255,216,58,.5);}
+  .g2dot.me::after{content:"userled";position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:700;color:var(--ink);white-space:nowrap;}
+  .g2-side .badges{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px;}
+  .badge2{text-align:center;}
+  .badge2 .medal{width:104px;height:122px;margin:0 auto 12px;position:relative;background:var(--g2);clip-path:polygon(50% 0,100% 16%,100% 70%,50% 100%,0 70%,0 16%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;box-shadow:var(--sh-sm);}
+  .badge2 .medal .g{font-weight:800;font-size:26px;letter-spacing:-.04em;line-height:1;}
+  .badge2 .medal .stars{display:flex;gap:2px;margin-top:5px;}
+  .badge2 .medal .stars svg{width:10px;height:10px;fill:#fff;}
+  .badge2 .lab{font-size:13px;font-weight:600;color:var(--ink);}
+  .badge2 .sub{font-size:11.5px;color:var(--gray-500);margin-top:2px;}
+
+  /* ===== integrations: horizontal building-blocks graphic + labels + logo wall ===== */
+  .blocks-h{max-width:760px;margin:54px auto 0;}
+  .blocks-h svg{width:100%;height:auto;display:block;}
+  .blocks-labels{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:760px;margin:14px auto 0;}
+  .blabel{text-align:center;border-radius:14px;padding:10px;transition:background .2s ease;}
+  .blabel:hover{background:var(--blue-50);}
+  .blabel .up{display:flex;justify-content:center;color:var(--gray-400);margin-bottom:8px;}
+  .blabel .up svg{width:20px;height:20px;}
+  .blabel b{font-size:15.5px;display:block;margin-bottom:5px;}
+  .blabel.is-userled b{color:var(--blue);}
+  .blabel p{font-size:13px;color:var(--gray-500);}
+  .intg-wall{max-width:760px;margin:56px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .intg-card{background:#fff;border-radius:16px;box-shadow:0 6px 22px rgba(11,12,16,.07);height:68px;display:flex;align-items:center;justify-content:center;gap:11px;transition:transform .18s ease,box-shadow .18s ease;}
+  .intg-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(11,12,16,.12);}
+  .intg-card .g{display:flex;align-items:center;justify-content:center;flex:0 0 24px;}
+  .intg-card .g svg{width:24px;height:24px;display:block;}
+  .intg-card .nm{font-weight:700;font-size:15px;color:#2a2d36;letter-spacing:-.01em;}
+  @media (max-width:680px){.intg-wall{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:440px){.intg-wall{grid-template-columns:1fr;}}
+
+  /* ===== agent cards: expand + play AI animation on HOVER ===== */
+  .agents-track{padding-top:16px;}
+  .agent-card{position:relative;transition:transform .25s ease, box-shadow .25s ease;}
+  .agent-card:hover{transform:scale(1.025);box-shadow:var(--sh-lg);z-index:2;}
+  /* corner arrow → that agent's page */
+  .agent-arrow{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:4;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);color:#fff;transition:transform .2s ease,background .2s ease,color .2s ease;}
+  .agent-arrow svg{width:15px;height:15px;}
+  .agent-card.light .agent-arrow,.agent-card.warm .agent-arrow{background:#fff;border-color:var(--line);color:var(--ink);box-shadow:var(--sh-sm);}
+  .agent-card:hover .agent-arrow{transform:scale(1.12);}
+  .agent-arrow:hover{background:#fff;color:var(--blue);}
+  .agent-card.light .agent-arrow:hover,.agent-card.warm .agent-arrow:hover{background:var(--blue);color:#fff;border-color:var(--blue);}
+
+  /* AI eyebrow — static at rest, animates on hover */
+  .ai-eyebrow{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);}
+  .ai-eyebrow .sp{width:13px;height:13px;display:inline-flex;}
+  .ai-eyebrow .sp svg{width:100%;height:100%;fill:currentColor;}
+  .ai-eyebrow .dots{display:inline-block;width:12px;overflow:hidden;}
+  .ai-eyebrow .dots::before{content:"...";display:inline-block;}
+  .live-dot{width:7px;height:7px;border-radius:50%;background:#16c062;margin-left:3px;}
+  @keyframes ai-spark{0%,100%{opacity:.55;transform:scale(.85) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(25deg)}}
+  @keyframes ai-dots{to{clip-path:inset(0 0 0 0)}}
+  @keyframes ai-pulse{0%{box-shadow:0 0 0 0 rgba(22,192,98,.5)}100%{box-shadow:0 0 0 8px rgba(22,192,98,0)}}
+
+  /* resting (finished) states */
+  .pm .prow .tog.auto{background:var(--blue);}
+  .pm .prow .tog.auto::after{left:auto;right:2px;}
+  .pm .th.rv{opacity:1;transform:none;}
+  .pm .sigrow.anim{opacity:1;}
+  .promptline .typed{display:inline-block;overflow:hidden;white-space:nowrap;max-width:215px;border-right:2px solid var(--blue);}
+  .bars.live i:nth-child(1){height:48%}.bars.live i:nth-child(2){height:72%}.bars.live i:nth-child(3){height:58%}.bars.live i:nth-child(4){height:88%}.bars.live i:nth-child(5){height:70%}.bars.live i:nth-child(6){height:96%}
+  .mini-prog{height:6px;border-radius:4px;background:#eceef2;overflow:hidden;margin-top:2px;}
+  .mini-prog i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,#5d78ff,var(--blue));width:72%;}
+
+  /* hover → replay the generation */
+  .agent-card:hover .ai-eyebrow .sp{animation:ai-spark 2.2s ease-in-out infinite;}
+  .agent-card:hover .ai-eyebrow .dots::before{clip-path:inset(0 100% 0 0);animation:ai-dots 1.6s steps(4) infinite;}
+  .agent-card:hover .live-dot{animation:ai-pulse 1.8s ease-out infinite;}
+  .agent-card:hover .pm .prow .tog.auto{animation:tog-track 4.5s ease-in-out infinite;}
+  .agent-card:hover .pm .prow .tog.auto::after{left:2px;right:auto;animation:tog-knob 4.5s ease-in-out infinite;}
+  .agent-card:hover .pm .prow .tog.a2,.agent-card:hover .pm .prow .tog.a2::after{animation-delay:.5s;}
+  .agent-card:hover .pm .prow .tog.a3,.agent-card:hover .pm .prow .tog.a3::after{animation-delay:1s;}
+  @keyframes tog-knob{0%,8%{transform:translateX(0)}30%,92%{transform:translateX(13px)}100%{transform:translateX(0)}}
+  @keyframes tog-track{0%,8%{background:#cdd2dc}30%,92%{background:var(--blue)}100%{background:#cdd2dc}}
+  .agent-card:hover .mini-prog i{animation:mini-prog 4.5s ease-in-out infinite;}
+  @keyframes mini-prog{0%{width:8%}88%{width:96%}100%{width:72%}}
+  .agent-card:hover .promptline .typed{animation:type 5.5s steps(30,end) infinite;}
+  @keyframes type{0%{max-width:0}50%,100%{max-width:215px}}
+  .agent-card:hover .pm .th.rv{animation:th-rv 5.5s ease infinite;}
+  .agent-card:hover .pm .th.r1{animation-delay:1.8s}.agent-card:hover .pm .th.r2{animation-delay:2.2s}.agent-card:hover .pm .th.r3{animation-delay:2.6s}.agent-card:hover .pm .th.r4{animation-delay:3.0s}
+  @keyframes th-rv{0%,28%{opacity:0;transform:scale(.8)}40%,100%{opacity:1;transform:scale(1)}}
+  .agent-card:hover .bars.live i{animation:bar-live 2.6s ease-in-out infinite;}
+  .agent-card:hover .bars.live i:nth-child(1){animation-delay:0s}.agent-card:hover .bars.live i:nth-child(2){animation-delay:.2s}.agent-card:hover .bars.live i:nth-child(3){animation-delay:.4s}.agent-card:hover .bars.live i:nth-child(4){animation-delay:.6s}.agent-card:hover .bars.live i:nth-child(5){animation-delay:.8s}.agent-card:hover .bars.live i:nth-child(6){animation-delay:1s}
+  @keyframes bar-live{0%,100%{height:34%}50%{height:88%}}
+  .agent-card:hover .pm .sigrow.anim{animation:sig-in 5.5s ease infinite;}
+  .agent-card:hover .pm .sigrow.s1{animation-delay:.2s}.agent-card:hover .pm .sigrow.s2{animation-delay:.9s}.agent-card:hover .pm .sigrow.s3{animation-delay:1.6s}
+  @keyframes sig-in{0%,4%{opacity:0;transform:translateY(8px)}12%,100%{opacity:1;transform:translateY(0)}}
+
+  /* ===== results / counter (brand blue) ===== */
+  .results{background:linear-gradient(180deg,#f6f8ff,#ebeeff);color:var(--ink);}
+  .res-head{padding-bottom:32px;border-bottom:1px solid rgba(11,12,16,.10);}
+  .res-head h2{font-family:var(--font-sans);font-weight:800;font-size:clamp(28px,4.4vw,52px);letter-spacing:-.02em;line-height:1.05;color:var(--ink);}
+  .res-head h2 em{font-style:normal;color:var(--orange-text);}
+  .res-num{padding:38px 0 30px;border-bottom:1px solid rgba(11,12,16,.10);}
+  .bignum{font-family:var(--font-sans);font-weight:800;font-size:clamp(58px,15vw,178px);line-height:.86;letter-spacing:-.045em;font-variant-numeric:tabular-nums;background:linear-gradient(180deg,var(--ink) 35%,var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .res-label{color:var(--orange-text);font-size:clamp(15px,1.7vw,21px);font-weight:500;margin-top:12px;}
+  .res-bottom{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding-top:40px;}
+  .res-chart svg{width:100%;height:auto;display:block;}
+  .res-copy{font-size:clamp(18px,2vw,25px);line-height:1.4;color:var(--gray-700);}
+  @media (max-width:820px){.res-bottom{grid-template-columns:1fr;gap:30px;}}
+
+  /* closing cta */
+  .cta{position:relative;color:#fff;overflow:hidden;background:radial-gradient(120% 120% at 50% 0%, #3a63ff, var(--blue) 45%, #1430bf 100%);}
+  .cta::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(70% 70% at 50% 40%,#000,transparent);opacity:.5;}
+  .cta .container{position:relative;z-index:2;text-align:center;}
+  .cta h2{font-size:clamp(42px,6vw,86px);font-weight:300;margin-bottom:20px;}
+  .cta p{color:rgba(255,255,255,.9);max-width:560px;margin:0 auto 36px;font-size:18px;}
+  .cta .hero-cta-row{margin-top:0;}
+
+  footer{background:var(--ink);color:#fff;padding:74px 0 36px;}
+  .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr 1fr;gap:30px;}
+  .foot-brand .logo{color:#fff;font-size:24px;}
+  .foot-brand p{margin-top:16px;color:rgba(255,255,255,.6);font-size:14px;max-width:260px;}
+  .foot-brand .tag{margin-top:18px;font-family:var(--font-serif);font-size:20px;color:#fff;}
+  .foot-col h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin:0 0 15px;font-weight:600;}
+  .foot-col a{display:block;color:rgba(255,255,255,.76);font-size:14.5px;padding:6px 0;}
+  .foot-col a:hover{color:#fff;}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:52px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.5);font-size:13px;flex-wrap:wrap;gap:14px;}
+  .foot-social{display:flex;gap:12px;}
+  .foot-social a{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;}
+  .foot-social svg{width:16px;height:16px;fill:#fff;}
+
+  @media (max-width:980px){
+    .nav-toggle{display:inline-flex;}
+    .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#fff;border:1px solid var(--line);border-radius:0 0 14px 14px;box-shadow:var(--sh);padding:6px 20px 14px;display:none;}
+    .nav.menu-open .nav-links{display:flex;}
+    .nav-links a{color:var(--ink-2);padding:13px 0;border-bottom:1px solid var(--line);}
+    .nav-links a:last-child{border-bottom:none;}
+    .nav-links a.active{border-bottom:1px solid var(--line);}
+    .nav-right a.login{display:none;}
+    .triplet{grid-template-columns:1fr;}
+    .tband-grid{grid-template-columns:1fr;} .tphoto{min-height:230px;}
+    .proof-head,.g2-layout{grid-template-columns:1fr;gap:34px;}
+    .blocks-labels{grid-template-columns:1fr;gap:14px;}
+    .signal-grid{grid-template-columns:1fr;gap:34px;}
+    .proof-head{align-items:start;}
+    .proof-roi{grid-template-columns:1fr 1fr;gap:30px 0;}
+    .minproof-grid{grid-template-columns:1fr;gap:26px;}
+    .minproof .mp{border-left:none;padding:0 0 22px;border-bottom:1px solid var(--line);}
+    .minproof .mp:last-child{border-bottom:none;padding-bottom:0;}
+    .vs-stage{min-height:440px;}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:32px;}
+  }
+  @media (max-width:560px){
+    .hero-cta-row{flex-direction:column;align-items:center;}
+    .foot-grid{grid-template-columns:1fr;}
+    .qrow .score{display:none;}
+    .agent-card{flex-basis:280px;min-height:444px;}
+    .proof-roi{grid-template-columns:1fr;}
+    .proof-roi .cell{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:20px;margin-top:4px;}
+    .proof-roi .cell:first-child{border-top:none;padding-top:0;margin-top:0;}
+    .proof-top{flex-wrap:wrap;gap:14px;} .proof-top .dots{display:none;}
+    .pipe-stats{grid-template-columns:1fr 1fr;}
+  }
+
+  /* respect reduced-motion preferences */
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}
+    .marquee{animation:none!important;}
+    .promptbar .caret{animation:none!important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="announce"><a href="#">Access our industry report on the 2025 AI + ABM Trends <span>→</span></a></div>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="hero-deco" aria-hidden="true">
+    <svg width="540" height="640" viewBox="0 0 540 640" fill="none" style="left:-130px;top:0"><ellipse cx="170" cy="320" rx="300" ry="360" stroke="#fff" stroke-opacity=".22" stroke-width="1.5" transform="rotate(-22 170 320)"/></svg>
+    <svg width="560" height="700" viewBox="0 0 560 700" fill="none" style="right:-170px;top:-10px"><ellipse cx="320" cy="350" rx="320" ry="400" stroke="#fff" stroke-opacity=".2" stroke-width="1.5" transform="rotate(20 320 350)"/></svg>
+  </div>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="container nav-inner">
+      <div class="logo">userled</div>
+      <div class="nav-links" id="navLinks"><a href="#">Playbooks</a><a href="#platform">Platform</a><a href="#" class="active">Teams</a><a href="#">Resources</a><a href="#">Free tools</a></div>
+      <div class="nav-right"><a class="login" href="#">Log in</a><a href="#book">Book a demo</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </nav>
+  <div class="container hero-inner">
+    <h1>The AI layer your<br/>ABM is missing.</h1>
+    <p class="hero-sub">Every account. Every channel. Every touchpoint. The only AI-native ABM platform that activates, engages, and converts key accounts.</p>
+    <div class="promptbar">
+      <span class="spark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.5L19 9.3l-5.2 1.8L12 16l-1.8-4.9L5 9.3l5.2-1.8L12 2z"/><path d="M19 14l.9 2.6L22 17.5l-2.1.9L19 21l-.9-2.6L16 17.5l2.1-.9L19 14z" opacity=".7"/></svg></span>
+      <span class="ptext" id="ptext"></span><span class="caret" aria-hidden="true"></span>
+      <button class="go" aria-label="Run prompt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="hero-cta-row">
+      <a class="btn btn-white" href="#book">Book a demo <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      <a class="btn btn-ghost-l" href="#"><span class="play-tri"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>See how it works</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== LOGO BAR ===================== -->
+<section class="logos">
+  <p class="cap">You're in good company</p>
+  <div class="marquee-wrap"><div class="marquee">
+    <div class="row"><span class="wordmark">Datadog</span><span class="wordmark">NinjaOne</span><span class="wordmark">Bloomreach</span><span class="wordmark">Pigment</span><span class="wordmark">Kpler</span><span class="wordmark">Labelbox</span></div>
+    <div class="row" aria-hidden="true"><span class="wordmark">Datadog</span><span class="wordmark">NinjaOne</span><span class="wordmark">Bloomreach</span><span class="wordmark">Pigment</span><span class="wordmark">Kpler</span><span class="wordmark">Labelbox</span></div>
+  </div></div>
+</section>
+
+<!-- ===================== MOTION ===================== -->
+<section class="section" id="platform">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">The motion</span>
+      <h2>You set the strategy,<br/>our AI runs the motion.</h2>
+      <p class="lead">Take accounts from first touch to closed-won with AI that supports every stage of the sales cycle.</p>
+    </div>
+    <div class="triplet">
+      <div class="tri-card"><svg class="ic" viewBox="0 0 48 34"><rect x="0" y="0" width="20" height="14" rx="3" fill="#1b45ff"/><rect x="24" y="0" width="14" height="14" rx="3" fill="#ff4e1b"/><rect x="0" y="18" width="14" height="14" rx="3" fill="#1b45ff"/><rect x="18" y="18" width="20" height="14" rx="3" fill="#1b45ff"/></svg><h3>Define.</h3><p>Identify high-value accounts based on signals and intent data.</p></div>
+      <div class="tri-card"><svg class="ic" viewBox="0 0 48 34"><rect x="0" y="6" width="16" height="11" rx="3" fill="#1b45ff"/><rect x="14" y="0" width="16" height="11" rx="3" fill="#ff4e1b"/><rect x="22" y="12" width="20" height="11" rx="3" fill="#1b45ff"/></svg><h3>Orchestrate.</h3><p>Run coordinated, on-brand plays across every channel.</p></div>
+      <div class="tri-card"><svg class="ic" viewBox="0 0 48 34"><line x1="2" y1="17" x2="46" y2="17" stroke="#0b0c10" stroke-width="2"/><rect x="18" y="9" width="16" height="16" rx="3" transform="rotate(45 24 17)" fill="#ff4e1b"/></svg><h3>Activate.</h3><p>Surface buying signals and arm sales with next-best actions.</p></div>
+    </div>
+    <div class="video-yt"><button class="play" aria-label="Play overview video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button></div>
+    <div class="tband">
+      <svg class="deco" viewBox="0 0 1100 320" fill="none" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><ellipse cx="150" cy="300" rx="120" ry="110" stroke="#fff" stroke-opacity=".14"/><ellipse cx="430" cy="320" rx="150" ry="130" stroke="#fff" stroke-opacity=".12"/><ellipse cx="900" cy="300" rx="120" ry="110" stroke="#fff" stroke-opacity=".14"/></svg>
+      <div class="tband-grid">
+        <div class="tstat"><div class="pill"><div class="big">3.2×</div><div class="cap">more qualified pipeline on target accounts*</div></div><div class="logo-c" id="tbLogo">Datadog</div></div>
+        <div class="tphoto"><div class="sil"></div></div>
+        <div class="tquote"><p id="tbQuote">"We've seen a couple of tools come into the market — Userled being one of them — that have really disrupted that in a way that focuses on distribution first rather than the beauty of building the microsite."</p><div class="who"><b id="tbName">Kevin Driscoll</b><span id="tbRole">Head of Global ABM &amp; Campaigns, Datadog</span></div></div>
+      </div>
+    </div>
+    <div class="tband-arrows">
+      <button id="tbPrev" aria-label="Previous quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button id="tbNext" aria-label="Next quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AGENTS ===================== -->
+<section class="section agents">
+  <div class="container">
+    <div class="agents-head"><span class="eyebrow">The Userled AI Platform</span><h2>Your agents for all things ABM.</h2><p class="lead">From content to campaigns to insights, our AI agents handle the entire workflow for every touchpoint.</p></div>
+    <div class="agents-track" id="agentsTrack">
+      <article class="agent-card dark"><a class="agent-arrow" href="#" aria-label="Open Campaign Agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><h3>Campaign Agent</h3><p>Builds and ships full-funnel campaigns at enterprise scale.</p>
+        <div class="pm"><div class="pmbar"><i></i><i></i><i></i><span class="t">Campaign · Acme Corp</span></div>
+          <div class="pmbody">
+            <div class="ai-eyebrow"><span class="sp"><svg viewBox="0 0 24 24"><path d="M12 2l1.8 5.5L19 9.3l-5.2 1.8L12 16l-1.8-4.9L5 9.3l5.2-1.8z"/></svg></span>Building campaign<span class="dots"></span></div>
+            <div class="prow">LinkedIn ads <span class="tog auto a1"></span></div>
+            <div class="prow">Display <span class="tog auto a2"></span></div>
+            <div class="prow">Email nurture <span class="tog auto a3"></span></div>
+            <div class="mini-prog"><i></i></div>
+          </div></div>
+      </article>
+      <article class="agent-card blue"><a class="agent-arrow" href="#" aria-label="Open Content Agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><h3>Content Agent</h3><p>Writes on-brand assets for every touchpoint.</p>
+        <div class="pm"><div class="pmbar"><i></i><i></i><i></i><span class="t">Library</span></div>
+          <div class="pmbody">
+            <div class="ai-eyebrow"><span class="sp"><svg viewBox="0 0 24 24"><path d="M12 2l1.8 5.5L19 9.3l-5.2 1.8L12 16l-1.8-4.9L5 9.3l5.2-1.8z"/></svg></span>Generating assets<span class="dots"></span></div>
+            <div class="promptline"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 5.5L19 9.3l-5.2 1.8L12 16l-1.8-4.9L5 9.3l5.2-1.8L12 2z"/></svg><span class="typed">Write a 1:1 landing page for Acme…</span></div>
+            <div class="thumbs"><span class="th pink rv r1"></span><span class="th red rv r2"></span><span class="th blue rv r3"></span><span class="th violet rv r4"></span></div>
+          </div></div>
+      </article>
+      <article class="agent-card light"><a class="agent-arrow" href="#" aria-label="Open Bidding Agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><h3>Bidding Agent</h3><p>Optimizes ad spend in real time against goals and priorities.</p>
+        <div class="pm"><div class="pmbar"><i></i><i></i><i></i><span class="t">Spend optimizer</span></div>
+          <div class="pmbody">
+            <div class="ai-eyebrow"><span class="sp"><svg viewBox="0 0 24 24"><path d="M12 2l1.8 5.5L19 9.3l-5.2 1.8L12 16l-1.8-4.9L5 9.3l5.2-1.8z"/></svg></span>Optimizing in real time</div>
+            <div class="bars live"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="kpi"><span class="v" id="roasV">2.4×</span><span class="up">ROAS ▲</span></div>
+          </div></div>
+      </article>
+      <article class="agent-card warm"><a class="agent-arrow" href="#" aria-label="Open Insights Agent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><h3>Insights Agent</h3><p>Surfaces every signal to help sales reps take immediate action.</p>
+        <div class="pm"><div class="pmbar"><i></i><i></i><i></i><span class="t">Signals</span></div>
+          <div class="pmbody">
+            <div class="ai-eyebrow"><span class="sp"><svg viewBox="0 0 24 24"><path d="M12 2l1.8 5.5L19 9.3l-5.2 1.8L12 16l-1.8-4.9L5 9.3l5.2-1.8z"/></svg></span>Live signals<span class="live-dot"></span></div>
+            <div class="sigrow anim s1"><span class="d" style="background:var(--orange)"></span>Intent spike · Acme Corp</div>
+            <div class="sigrow anim s2"><span class="d" style="background:var(--blue)"></span>Pricing page · 3 visits</div>
+            <div class="sigrow anim s3"><span class="d" style="background:#16a34a"></span>Ad engaged · VP Eng</div>
+          </div></div>
+      </article>
+    </div>
+    <div class="agents-arrows">
+      <button id="agPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button id="agNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- "Stay top of mind for every account" module removed on request (saved-modules/stay-top-of-mind.html). -->
+
+<!-- ===================== TURN SIGNAL INTO PIPELINE (image left, text right) ===================== -->
+<section class="section signal">
+  <div class="container">
+    <div class="signal-grid">
+      <div class="vswitch" id="signalSwitch" style="--vs-h:400px">
+        <div class="vs-stage">
+          <!-- slide 1: priority queue -->
+          <div class="vs-slide active">
+            <div class="queue">
+              <div class="qh"><b>Your priority accounts</b><span class="badge">AI-ranked</span></div>
+              <div class="qrow hot"><span class="av" style="background:linear-gradient(135deg,var(--blue),#5d78ff)">A</span><span class="nm"><b>Acme Corp</b><span>VP Eng opened pricing · 3× this week</span></span><span class="next">Worth your next hour</span><span class="act">Call now</span></div>
+              <div class="qrow"><span class="av" style="background:linear-gradient(135deg,#ffd0bf,#ff6a3d)">N</span><span class="nm"><b>NorthWind</b><span>Buying committee +4 engaged</span></span><span class="score"><span class="bar"><i style="width:82%"></i></span><em>82</em></span></div>
+              <div class="qrow"><span class="av" style="background:linear-gradient(135deg,#c4b1ff,#7c3aed)">V</span><span class="nm"><b>Vertex IO</b><span>Returned to microsite</span></span><span class="score"><span class="bar"><i style="width:67%"></i></span><em>67</em></span></div>
+              <div class="qrow"><span class="av" style="background:linear-gradient(135deg,#a8e6cf,#16a34a)">G</span><span class="nm"><b>Globex</b><span>Intent rising in-market</span></span><span class="score"><span class="bar"><i style="width:54%"></i></span><em>54</em></span></div>
+            </div>
+          </div>
+          <!-- slide 2: pipeline generated -->
+          <div class="vs-slide">
+            <div class="pipe">
+              <div class="qh"><b>Pipeline generated</b><span class="badge">Last 90 days</span></div>
+              <div class="pipe-body">
+                <div class="pipe-hero"><div class="big">$4.2M</div><div class="sub">influenced pipeline from target accounts</div></div>
+                <div class="pipe-chart">
+                  <div class="col"><i style="height:30%"></i><span>Apr</span></div>
+                  <div class="col"><i style="height:44%"></i><span>May</span></div>
+                  <div class="col"><i style="height:56%"></i><span>Jun</span></div>
+                  <div class="col"><i style="height:70%"></i><span>Jul</span></div>
+                  <div class="col"><i style="height:84%"></i><span>Aug</span></div>
+                  <div class="col"><i style="height:100%"></i><span>Sep</span></div>
+                </div>
+                <div class="pipe-axis">Influenced pipeline, month over month</div>
+                <div class="pipe-stats">
+                  <div class="ps"><div class="v">320</div><div class="k">Opportunities created</div></div>
+                  <div class="ps"><div class="v">34%</div><div class="k">Win rate</div></div>
+                  <div class="ps"><div class="v">$84k</div><div class="k">Avg. deal size</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vs-tabs"><button class="vt active">Priority queue</button><button class="vt">Pipeline generated</button></div>
+      </div>
+
+      <div>
+        <span class="eyebrow">Signal → pipeline</span>
+        <h2 style="margin:18px 0 20px">Turn signal into pipeline.</h2>
+        <p class="lead">Userled's AI connects signal to intent to automatically direct reps to the deals worth their next hour — then shows the pipeline it generates.</p>
+        <div class="sigchips"><span class="sc"><span class="d" style="background:var(--orange)"></span>Intent spike</span><span class="sc"><span class="d" style="background:var(--blue)"></span>Pricing page · 3 visits</span><span class="sc"><span class="d" style="background:#16a34a"></span>Ad engaged</span><span class="sc"><span class="d" style="background:#7c3aed"></span>Microsite revisit</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CUSTOMER PROOF (video) + minimal proof w/ headshots ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="proof-top"><span class="chip-label">Customer Proof</span><span class="dots"></span><a class="btn-outline" href="#">See all case studies</a></div>
+    <div class="proof-head"><h2>Where the best brands come to win deals.</h2><p class="lead">See how enterprise organizations use Userled's AI platform to scale ABM and drive pipeline.</p></div>
+    <div class="proof-video"><div class="dots-bg"></div><button class="play" aria-label="Play customer story"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button><span class="vlabel">Watch the story · 2 min</span></div>
+    <div class="proof-roi">
+      <div class="cell"><div class="rlabel">Customer ROI</div><a class="rlink" href="#">Download the ROI report</a></div>
+      <div class="cell"><div class="stat">3.2×</div><div class="desc">more pipeline influenced on target accounts</div></div>
+      <div class="cell"><div class="stat">68%</div><div class="desc">of engaged accounts reach an opportunity</div></div>
+      <div class="cell"><div class="stat">41%</div><div class="desc">lower cost per qualified account</div></div>
+    </div>
+    <div class="minproof">
+      <div class="mp-eyebrow">Proof in practice</div>
+      <div class="minproof-grid">
+        <div class="mp">
+          <div class="mk">NinjaOne</div>
+          <p class="qt">"Every touchpoint feels aligned. From LinkedIn advertising to personalized microsites to coordinated outreach, we're able to bring marketing and sales together in one motion."</p>
+          <div class="who"><span class="mp-av"></span><div class="nm"><b>Megan Lee</b>ABM Manager</div></div>
+        </div>
+        <div class="mp">
+          <div class="mk">Bloomreach</div>
+          <p class="qt">"Userled has been a genuine unlock for our ABM program — we can build ABM pages and ads at scale in a way that simply wasn't possible before."</p>
+          <div class="who"><span class="mp-av" style="background:linear-gradient(160deg,#ffd9c7,#e8543f)"></span><div class="nm"><b>Billie Baker</b>Director, Global Demand Gen</div></div>
+        </div>
+        <div class="mp">
+          <div class="mk">Datadog</div>
+          <p class="qt">"This is what the next evolution of microsite scale and distribution looks like — bringing the program beyond one-to-one, to one-to-few, to one-to-many."</p>
+          <div class="who"><span class="mp-av" style="background:linear-gradient(160deg,#d7c4ff,#7c3aed)"></span><div class="nm"><b>Kevin Driscoll</b>Head of Global ABM &amp; Campaigns</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESULTS COUNTER ===================== -->
+<section class="section results">
+  <div class="container">
+    <div class="res-head"><h2>No AI hype here. <em>Just results.</em></h2></div>
+    <div class="res-num">
+      <div class="bignum" id="countUp" data-target="1284930">0</div>
+      <div class="res-label">ABM campaigns generated on Userled (and counting)</div>
+    </div>
+    <div class="res-bottom">
+      <div class="res-chart">
+        <svg viewBox="0 0 520 250" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs><pattern id="resdots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="rgba(27,69,255,.14)"/></pattern></defs>
+          <path d="M10 215 L80 200 L150 182 L210 188 L270 150 L330 112 L400 74 L495 28 L495 240 L10 240 Z" fill="url(#resdots)"/>
+          <polyline points="10,215 80,200 150,182 210,188 270,150 330,112 400,74 495,28" stroke="#1b45ff" stroke-width="2.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="495" cy="28" r="7" fill="#ff4e1b"/>
+          <text x="10" y="248" fill="rgba(11,12,16,.45)" font-size="12" font-family="Inter,sans-serif">Jan 2023</text>
+          <text x="446" y="248" fill="rgba(11,12,16,.45)" font-size="12" font-family="Inter,sans-serif">Today</text>
+        </svg>
+      </div>
+      <p class="res-copy">Userled is where revenue teams put AI to work. Build full-funnel ABM campaigns, run them across every channel, and actually deliver on your ABM strategy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== G2 ===================== -->
+<section class="section g2">
+  <div class="container">
+    <div class="section-head center"><span class="eyebrow">Recognition</span><h2>Userled, named a High Performer by G2.</h2><p class="lead">Rated by the marketers who run ABM on Userled every day.</p></div>
+    <div class="g2-layout">
+      <div class="g2grid" role="img" aria-label="G2 Grid: Userled positioned high on satisfaction and market presence">
+        <span class="wm">G2</span><span class="axis-v"></span><span class="axis-h"></span>
+        <span class="ql tl">Contenders</span><span class="ql tr">Leaders</span><span class="ql bl">Niche</span><span class="ql br">High&nbsp;Performers</span>
+        <span class="axlbl-x">Satisfaction</span><span class="axlbl-y">Market Presence</span>
+        <span class="g2dot" style="left:30%;top:40%;background:#1b3a8f">D</span>
+        <span class="g2dot" style="left:40%;top:33%"></span>
+        <span class="g2dot" style="left:48%;top:43%;background:#0891b2">6</span>
+        <span class="g2dot" style="left:26%;top:53%"></span>
+        <span class="g2dot" style="left:55%;top:36%"></span>
+        <span class="g2dot" style="left:62%;top:30%;background:#7c3aed">T</span>
+        <span class="g2dot" style="left:60%;top:48%"></span>
+        <span class="g2dot" style="left:36%;top:60%"></span>
+        <span class="g2dot" style="left:47%;top:56%;background:#16a34a">S</span>
+        <span class="g2dot" style="left:56%;top:63%"></span>
+        <span class="g2dot" style="left:66%;top:42%"></span>
+        <span class="g2dot" style="left:70%;top:56%;background:#e8543f">R</span>
+        <span class="g2dot" style="left:72%;top:67%"></span>
+        <span class="g2dot" style="left:33%;top:71%"></span>
+        <span class="g2dot" style="left:50%;top:73%"></span>
+        <span class="g2dot" style="left:62%;top:74%"></span>
+        <span class="g2dot" style="left:24%;top:64%"></span>
+        <span class="g2dot" style="left:58%;top:82%"></span>
+        <span class="g2dot me" style="left:80%;top:23%">u</span>
+      </div>
+      <div class="g2-side">
+        <div class="badges">
+          <div class="badge2"><div class="medal"><span class="g">G2</span><span class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 7 .9-5 4.7 1.3 6.9L12 17.8 5.4 20.8 6.7 13.9 1.7 9.2l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 7 .9-5 4.7 1.3 6.9L12 17.8 5.4 20.8 6.7 13.9 1.7 9.2l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 7 .9-5 4.7 1.3 6.9L12 17.8 5.4 20.8 6.7 13.9 1.7 9.2l7-.9z"/></svg></span></div><div class="lab">High Performer</div><div class="sub">Spring 2026</div></div>
+          <div class="badge2"><div class="medal"><span class="g">G2</span><span class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 7 .9-5 4.7 1.3 6.9L12 17.8 5.4 20.8 6.7 13.9 1.7 9.2l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 7 .9-5 4.7 1.3 6.9L12 17.8 5.4 20.8 6.7 13.9 1.7 9.2l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 7 .9-5 4.7 1.3 6.9L12 17.8 5.4 20.8 6.7 13.9 1.7 9.2l7-.9z"/></svg></span></div><div class="lab">Momentum Leader</div><div class="sub">Spring 2026</div></div>
+          <div class="badge2"><div class="medal"><span class="g">G2</span><span class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 7 .9-5 4.7 1.3 6.9L12 17.8 5.4 20.8 6.7 13.9 1.7 9.2l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 7 .9-5 4.7 1.3 6.9L12 17.8 5.4 20.8 6.7 13.9 1.7 9.2l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 7 .9-5 4.7 1.3 6.9L12 17.8 5.4 20.8 6.7 13.9 1.7 9.2l7-.9z"/></svg></span></div><div class="lab">Easiest To Use</div><div class="sub">Spring 2026</div></div>
+          <div class="badge2"><div class="medal"><span class="g">G2</span><span class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 7 .9-5 4.7 1.3 6.9L12 17.8 5.4 20.8 6.7 13.9 1.7 9.2l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 7 .9-5 4.7 1.3 6.9L12 17.8 5.4 20.8 6.7 13.9 1.7 9.2l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 7 .9-5 4.7 1.3 6.9L12 17.8 5.4 20.8 6.7 13.9 1.7 9.2l7-.9z"/></svg></span></div><div class="lab">Users Love Us</div><div class="sub">Spring 2026</div></div>
+        </div>
+        <p class="lead" style="font-size:15px;margin-bottom:18px">Top-right and climbing — Userled leads on satisfaction and momentum in account-based marketing.</p>
+        <a class="link-arrow" href="#">Read our reviews on G2 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INTEGRATIONS (horizontal building blocks + icon grid) ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center"><span class="eyebrow">Integrations</span><h2>Built on the signals your stack already generates.</h2><p class="lead">Userled is the AI layer that slots into your stack — turning the intent and account signals you already collect into campaigns for every channel.</p></div>
+
+    <!-- building-blocks graphic, horizontal flow: signals -> Userled -> channels -->
+    <div class="blocks-h">
+      <svg class="blocks" viewBox="0 0 720 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Building blocks: signals feed into the Userled AI layer, which activates every channel">
+        <!-- even grounding shadows -->
+        <ellipse cx="145" cy="272" rx="80" ry="11" fill="#0b0c10" opacity=".06"/>
+        <ellipse cx="360" cy="268" rx="98" ry="13" fill="#1b45ff" opacity=".13"/>
+        <ellipse cx="575" cy="272" rx="80" ry="11" fill="#0b0c10" opacity=".06"/>
+
+        <!-- LEFT: Signals & data -->
+        <polygon points="57,175 145,219 145,261 57,217" fill="#16357f"/>
+        <polygon points="145,219 233,175 233,217 145,261" fill="#8fa6f0"/>
+        <polygon points="145,131 233,175 145,219 57,175" fill="#c9d4ff"/>
+        <polygon points="57,175 101,153 145,175 101,197" fill="#16357f"/>
+
+        <!-- MIDDLE: Userled (raised hero) -->
+        <polygon points="264,140 360,188 360,254 264,206" fill="#11246e"/>
+        <polygon points="360,188 456,140 456,206 360,254" fill="#1b45ff"/>
+        <polygon points="360,92 456,140 360,188 264,140" fill="#3f63ff"/>
+        <polygon points="264,140 312,116 360,140 312,164" fill="#6b86ff"/>
+
+        <!-- RIGHT: Channels & touchpoints -->
+        <polygon points="487,175 575,219 575,261 487,217" fill="#16357f"/>
+        <polygon points="575,219 663,175 663,217 575,261" fill="#e7d3c4"/>
+        <polygon points="575,131 663,175 575,219 487,175" fill="#f6efe8"/>
+        <polygon points="531,153 575,131 619,153 575,175" fill="#ec6a4f"/>
+        <polygon points="575,175 619,153 663,175 619,197" fill="#f49a83"/>
+
+        <!-- flow arrows (left to right) -->
+        <g stroke="#11246e" stroke-width="2.6" stroke-linecap="round">
+          <line x1="240" y1="175" x2="256" y2="175"/><polygon points="264,175 254,170 254,180" fill="#11246e" stroke="none"/>
+          <line x1="463" y1="175" x2="479" y2="175"/><polygon points="487,175 477,170 477,180" fill="#11246e" stroke="none"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- component labels with arrows pointing up to the graphic -->
+    <div class="blocks-labels">
+      <div class="blabel">
+        <span class="up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M6 11l6-6 6 6"/></svg></span>
+        <b>Signals &amp; data</b><p>Demandbase · 6sense · Salesforce · HubSpot — the intelligence you already collect.</p>
+      </div>
+      <div class="blabel is-userled">
+        <span class="up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M6 11l6-6 6 6"/></svg></span>
+        <b>Userled — the AI layer</b><p>Campaign, Content, Bidding &amp; Insights agents turn signals into coordinated activation.</p>
+      </div>
+      <div class="blabel">
+        <span class="up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M6 11l6-6 6 6"/></svg></span>
+        <b>Channels &amp; touchpoints</b><p>LinkedIn · Display · Email · Web &amp; microsites · Sales — every place your buyers show up.</p>
+      </div>
+    </div>
+
+    <div class="intg-wall">
+      <div class="intg-card"><span class="g"><svg viewBox="0 0 24 24" fill="#00a1e0"><path d="M14.4 9.1a3.6 3.6 0 016.5 1.9 3.4 3.4 0 01-1.2 6.6H7.6A4.6 4.6 0 016 8.5a3.8 3.8 0 015.6-1.5 4.4 4.4 0 012.8 2.1z"/></svg></span><span class="nm">Salesforce</span></div>
+      <div class="intg-card"><span class="g"><svg viewBox="0 0 24 24" fill="none" stroke="#ff7a59" stroke-width="2"><circle cx="9" cy="15.5" r="4.5"/><circle cx="17.5" cy="7.5" r="2.5"/><path d="M17.5 10v3M9 11V5.5"/></svg></span><span class="nm">HubSpot</span></div>
+      <div class="intg-card"><span class="g"><svg viewBox="0 0 24 24" fill="#5c4c9f"><path d="M4 19V5l6 7 6-7v14h-3.4v-7.3L10 16l-2.6-4.3V19z"/></svg></span><span class="nm">Marketo</span></div>
+      <div class="intg-card"><span class="g"><svg viewBox="0 0 24 24" fill="#0a66c2"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21H17.6v-5.3c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/></svg></span><span class="nm">LinkedIn</span></div>
+      <div class="intg-card"><span class="g"><svg viewBox="0 0 24 24" fill="none" stroke="#ec1c4d" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3" fill="#ec1c4d" stroke="none"/></svg></span><span class="nm">6sense</span></div>
+      <div class="intg-card"><span class="g"><svg viewBox="0 0 24 24" fill="#1b45ff"><path d="M5 4h6.2a8 8 0 010 16H5zM9 8v8h2.2a4 4 0 000-8z"/></svg></span><span class="nm">Demandbase</span></div>
+      <div class="intg-card"><span class="g"><svg viewBox="0 0 24 24"><rect x="10.4" y="3" width="3.2" height="8.5" rx="1.6" fill="#36c5f0"/><rect x="12.5" y="10.4" width="8.5" height="3.2" rx="1.6" fill="#2eb67d"/><rect x="10.4" y="12.5" width="3.2" height="8.5" rx="1.6" fill="#ecb22e"/><rect x="3" y="10.4" width="8.5" height="3.2" rx="1.6" fill="#e01e5a"/></svg></span><span class="nm">Slack</span></div>
+      <div class="intg-card"><span class="g"><svg viewBox="0 0 24 24" fill="#7c3aed"><path d="M3 11.2 21 4l-7.2 18-2.9-7z"/></svg></span><span class="nm">Sendoso</span></div>
+      <div class="intg-card"><span class="g"><svg viewBox="0 0 24 24" fill="none" stroke="#29b5e8" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9"/></svg></span><span class="nm">Snowflake</span></div>
+      <div class="intg-card"><span class="g"><svg viewBox="0 0 24 24"><path d="M10.2 3.2 3.4 15a3 3 0 005.2 3l6.8-11.8a3 3 0 00-5.2-3z" fill="#fbbc04"/><path d="M15.4 6.2 21 16a3 3 0 01-5.2 3l-3.3-5.8z" fill="#4285f4"/><circle cx="6" cy="18" r="3" fill="#34a853"/></svg></span><span class="nm">Google Ads</span></div>
+      <div class="intg-card"><span class="g"><svg viewBox="0 0 24 24" fill="none" stroke="#5952f4" stroke-width="2.6"><circle cx="12" cy="12" r="7.5"/></svg></span><span class="nm">Outreach</span></div>
+      <div class="intg-card"><span class="g"><svg viewBox="0 0 24 24" fill="none" stroke="#8b3df0" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3.5" fill="#8b3df0" stroke="none"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"/></svg></span><span class="nm">Gong</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CLOSING CTA ===================== -->
+<section class="section cta" id="book">
+  <div class="container">
+    <h2>User-led. <em style="font-style:italic">AI-run.</em></h2>
+    <p>Every account. Every channel. Every touchpoint. AI agents for creating any ABM campaign at scale and winning enterprise deals.</p>
+    <div class="hero-cta-row"><a class="btn btn-white" href="#">Book a demo <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a><a class="btn btn-ghost-l" href="#">Talk to sales</a></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand"><div class="logo">userled</div><p>The AI-native ABM platform that activates, engages, and converts your key accounts.</p><div class="tag">User-led. AI-run.</div></div>
+      <div class="foot-col"><h4>Platform</h4><a href="#">Overview</a><a href="#">AI agents</a><a href="#">Channels</a><a href="#">Integrations</a><a href="#">Security</a></div>
+      <div class="foot-col"><h4>Solutions</h4><a href="#">Marketing</a><a href="#">Demand gen</a><a href="#">ABM</a><a href="#">RevOps</a><a href="#">Sales</a></div>
+      <div class="foot-col"><h4>Resources</h4><a href="#">Playbooks</a><a href="#">Customer stories</a><a href="#">Blog</a><a href="#">Free tools</a></div>
+      <div class="foot-col"><h4>Company</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Contact</a><a href="#book">Book a demo</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Userled. All rights reserved.</span>
+      <div style="display:flex;gap:22px"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+      <div class="foot-social">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21H21.4v-5.3c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H13.8z"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7.5 8.6L22 22h-6.8l-4.3-5.6L5.8 22H2.8l8-9.2L2 2h6.9l3.9 5.2zM16.9 20h1.7L7.2 4H5.4z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5A2.5 2.5 0 001.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 001.8-1.8C23 15.2 23 12 23 12zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // respect reduced-motion for JS-driven animations
+  var REDUCE = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // sticky nav background on scroll
+  (function(){var nav=document.getElementById('nav');var f=function(){nav.classList.toggle('scrolled',window.scrollY>40);};window.addEventListener('scroll',f,{passive:true});f();})();
+
+  // mobile nav toggle
+  (function(){
+    var btn=document.getElementById('navToggle'),nav=document.getElementById('nav');if(!btn)return;
+    function close(){nav.classList.remove('menu-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Open menu');}
+    btn.addEventListener('click',function(){
+      var open=nav.classList.toggle('menu-open');
+      btn.setAttribute('aria-expanded',String(open));
+      btn.setAttribute('aria-label',open?'Close menu':'Open menu');
+    });
+    nav.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',close);});
+  })();
+
+  // agents horizontal scroller
+  (function(){var t=document.getElementById('agentsTrack');if(!t)return;var s=354;var p=document.getElementById('agPrev'),n=document.getElementById('agNext');if(p)p.onclick=function(){t.scrollBy({left:-s,behavior:'smooth'});};if(n)n.onclick=function(){t.scrollBy({left:s,behavior:'smooth'});};})();
+
+  // testimonial band carousel
+  (function(){
+    var quotes=[
+      {q:'"We’ve seen a couple of tools come into the market — Userled being one of them — that have really disrupted that in a way that focuses on distribution first rather than the beauty of building the microsite."',n:'Kevin Driscoll',r:'Head of Global ABM & Campaigns, Datadog',l:'Datadog'},
+      {q:'"Every touchpoint feels aligned. From LinkedIn advertising to personalized microsites to coordinated outreach, we’re able to bring marketing and sales together in one motion."',n:'Megan Lee',r:'ABM Manager, NinjaOne',l:'NinjaOne'},
+      {q:'"Userled has been a genuine unlock for our ABM program at Bloomreach — we can build ABM pages and ads at scale in a way that simply wasn’t possible before."',n:'Billie Baker',r:'Director, Global Demand Generation, Bloomreach',l:'Bloomreach'}
+    ];
+    var i=0,q=document.getElementById('tbQuote'),nm=document.getElementById('tbName'),rl=document.getElementById('tbRole'),lg=document.getElementById('tbLogo');
+    function render(){var d=quotes[i];q.textContent=d.q;nm.textContent=d.n;rl.textContent=d.r;lg.textContent=d.l;}
+    var p=document.getElementById('tbPrev'),n=document.getElementById('tbNext');
+    if(p)p.onclick=function(){i=(i-1+quotes.length)%quotes.length;render();};
+    if(n)n.onclick=function(){i=(i+1)%quotes.length;render();};
+  })();
+
+  // dual-state visual switchers (auto-advance + tabs)
+  function initSwitch(id){
+    var root=document.getElementById(id); if(!root) return;
+    var slides=root.querySelectorAll('.vs-slide'), tabs=root.querySelectorAll('.vt'), i=0, timer;
+    function go(n){i=(n+slides.length)%slides.length;
+      slides.forEach(function(s,k){s.classList.toggle('active',k===i);});
+      tabs.forEach(function(t,k){t.classList.toggle('active',k===i);});}
+    function auto(){if(REDUCE)return;timer=setInterval(function(){go(i+1);},5000);}
+    tabs.forEach(function(t,k){t.onclick=function(){clearInterval(timer);go(k);auto();};});
+    go(0); auto();
+  }
+  initSwitch('signalSwitch');
+
+  // count-up results number (triggers on scroll into view, then keeps counting)
+  (function(){
+    var el=document.getElementById('countUp'); if(!el) return;
+    var target=parseInt(el.getAttribute('data-target'),10), started=false;
+    function fmt(n){return n.toLocaleString('en-US');}
+    function run(){ if(started) return; started=true;
+      if(REDUCE){el.textContent=fmt(target);return;}
+      var dur=2200,t0=performance.now();
+      function fr(now){var p=Math.min((now-t0)/dur,1),e=1-Math.pow(1-p,3); el.textContent=fmt(Math.floor(e*target));
+        if(p<1){requestAnimationFrame(fr);} else {var c=target; setInterval(function(){c+=Math.floor(Math.random()*6)+1; el.textContent=fmt(c);},1900);} }
+      requestAnimationFrame(fr); }
+    if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){run();io.disconnect();}});},{threshold:.35});io.observe(el);} else run();
+  })();
+
+  // live ROAS micro-ticker
+  (function(){var el=document.getElementById('roasV');if(!el||REDUCE)return;var v=['2.4×','2.5×','2.3×','2.6×','2.4×'],i=0;setInterval(function(){i=(i+1)%v.length;el.textContent=v[i];},2600);})();
+
+  // hero prompt typing effect
+  (function(){
+    var el=document.getElementById('ptext');
+    var prompts=["Create an ABM campaign for Canva.","Show me the most engaged contacts for the last campaign.","Optimize our LinkedIn ad spend for our priority accounts."];
+    if(REDUCE){el.textContent=prompts[0];return;}
+    var pi=0,ci=0,deleting=false,paused=0;
+    function tick(){var word=prompts[pi];
+      if(paused>0){paused--;return schedule(60);}
+      if(!deleting){ci++;el.textContent=word.slice(0,ci);if(ci>=word.length){deleting=true;paused=34;}return schedule(46);}
+      else{ci--;el.textContent=word.slice(0,Math.max(0,ci));if(ci<=0){deleting=false;pi=(pi+1)%prompts.length;paused=6;}return schedule(26);}}
+    function schedule(t){clearTimeout(window.__tw);window.__tw=setTimeout(tick,t);}
+    tick();
+  })();
+</script>
+</body>
+</html>
